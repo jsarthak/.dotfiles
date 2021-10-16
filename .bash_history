@@ -475,3 +475,55 @@ ls -la
 mkdir ~/.dotfiles
 cd ~/.dotfiles/
 ls
+cd ~/.dotfiles/
+ls
+git init
+git add .
+apt list --installed
+apt list --installed | sudo apt install
+touch packages.txt
+touch packages.txt | apt list --installed
+more packages.txt 
+cat packages.txt 
+apt list --installed | touch packages.txt 
+more packages.txt 
+apt list --installed | gedti packages.txt 
+apt list --installed | gedit packages.txt 
+chmod +x package-install.sh 
+./package-install.sh 
+apt search keepass
+apt search bitwarden
+apt search brave
+./package-install.sh 
+./setup.sh
+chmod +X setup.sh 
+./setup.sh
+chmod +x setup.sh 
+./setup.sh 
+git commit -m "first commit"
+git config
+git config --global
+gt config help
+git config help
+git config
+git config --global
+git git remote add origin https://github.com/jsarthak/.dotfiles.git
+git remote add origin https://github.com/jsarthak/.dotfiles.git
+git push -u origin master
+ls
+cd ~/.ssh
+ls
+ssh-keygen -t jsarthak -C "jsarthak@outlook.com"
+ssh-keygen -t rsa -b 4096 -C "jsarthak@outlook.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+cat ~/.ssh/id
+cat ~/.ssh/id_rsa
+clear
+ssh-keygen -t ed25519 -C "jsarthak@outlook.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519
+gedit ~/.ssh/id_ed25519
+apt list --installed
+apt search atom
