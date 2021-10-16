@@ -1,0 +1,7 @@
+[user]
+	name = Sarthak Jain
+	email = 11425649+jsarthak@users.noreply.github.com
+[credential]
+	helper = store
+	useHttpPath = true
+	credentialStore = cache
