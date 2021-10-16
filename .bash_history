@@ -527,3 +527,66 @@ cat ~/.ssh/id_ed25519
 gedit ~/.ssh/id_ed25519
 apt list --installed
 apt search atom
+exit
+cd ~/.dotfiles/
+ls
+git commit -m "first commit"
+git add .
+git commit -m "first commit"
+git push -u origin master
+ssh-add ~/.ssh/id_ed25519
+ssh -T git@github.com
+git push
+git push -u origin master
+ls -tl /var/lib/dpkg/info/ | grep list > installed-packages.txt
+ls
+cat installed-packages.txt 
+git status
+git add .
+git commit -m "package lists"
+git push
+git config --global credential.helper manager-core
+git-credential-manager-core configure
+sudo apt cache search git-credential
+apt search git 
+apt search git-credential
+apt search gmcore
+sudo dpkg -i ~/Downloads/gcmcore-linux_amd64.2.0.567.18224.deb 
+git-credential-manager-core configure
+git config --global credential.credentialStore
+git config --global credential.helper store
+git status
+git push
+git config 
+git config --global
+git-credential-manager-core configure
+git config --global credential.credentialStore secretservice
+git config --global credential.helper manager-core
+git status
+git add .
+git push
+git config --global credential.credentialStore cache
+git push
+export GCM_CREDENTIAL_STORE=cache
+git config --global credential.credentialStore cache
+git push
+export GCM_CREDENTIAL_STORE=gpg
+git push
+gpg --gen-ley
+gpg --gen-key 
+git push
+pass BFADB9518E8780AA278DB52AF3349563C79E2028
+pass init BFADB9518E8780AA278DB52AF3349563C79E2028
+sudo apt install pass
+pass init BFADB9518E8780AA278DB52AF3349563C79E2028
+git push
+sudo apt-get install -y libfontconfig1
+git config --global credential.helper store
+git push
+git status
+git add .
+more .gitconfig 
+git commit -m "git config fix"
+git push
+sudo apt install tmux
+tmux
