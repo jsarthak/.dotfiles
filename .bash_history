@@ -590,3 +590,44 @@ git commit -m "git config fix"
 git push
 sudo apt install tmux
 tmux
+cd ~/.dotfiles/
+git status
+git add .
+git commit -m "added new"
+git push
+clear
+exit
+adb shell
+fastboot devices
+fastboot -u flash '/home/samsepi0l/Downloads/gsi_gms_arm64-exp-SPB5.210812.003-7673742-e867b9a2/system.img' 
+fastboot flash '/home/samsepi0l/Downloads/gsi_gms_arm64-exp-SPB5.210812.003-7673742-e867b9a2/system.img' 
+fastboot --u flash '/home/samsepi0l/Downloads/gsi_gms_arm64-exp-SPB5.210812.003-7673742-e867b9a2/system.img' 
+fastboot -u flash system 
+fastboot 
+fastboot -u
+fastboot --u
+fastboot --u flash system 
+fastboot --u flash system.img 
+fastboot flash recovery '/home/samsepi0l/Downloads/PBRP-whyred-3.1.0-20210329-0745-OFFICIAL.zip' 
+fastboot reboot
+fastboot reboot recovery
+fastboot flash recovery '/home/samsepi0l/Downloads/lineage-18.1-20211011-recovery-whyred.img' 
+fastboot reboot
+fastboot flash '/media/samsepi0l/9637-D92A/system.img' 
+fastboot flash vbmeta.img 
+fastboot flash vbmeta
+fastboot --disable-verity -disable-verification flash vbmeta vbmeta.img
+fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img
+fastboot erase system
+fastboot flash system system.img
+fastboot -w
+fastboot reboot
+cd
+cd Downloads/
+fastboot flash recovery twrp-3.5.2_9-0-whyred.img 
+fastboot reboot
+cd app-installs/
+ls
+adb install Aegis.apk 
+adb install F-Droid.apk 
+adb install Torrz.apk 
