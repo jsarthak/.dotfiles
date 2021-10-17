@@ -32,6 +32,9 @@ linkDotfile .bashrc
 linkDotfile .gitconfig
 linkDotfile .fonts
 linkDotfile .vscode
+linkDotfile .config/starship.toml
+linkDotfile .config/fontconfig
+linkDotfile Templates
 
 mkdir -p $dotfilesDir/.vim/bundle
 cd $dotfilesDir/.vim/bundle
