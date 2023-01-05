@@ -1,0 +1,5 @@
+pane	0	1	1	:*	1	IGN-BLR-LP-0320	:/home/sarthakj	1	ssh	:ssh sarthak@10.201.4.253
+pane	0	2	0	:##-	1	IGN-BLR-LP-0320	:/home/sarthakj	1	bash	:su -l ignitarium
+window	0	1	:ssh	1	:*	b35e,238x60,0,0,1	:
+window	0	2	:bash	0	:##-	b360,238x60,0,0,3	:
+state	0	

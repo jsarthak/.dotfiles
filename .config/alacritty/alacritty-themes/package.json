@@ -1,0 +1,98 @@
+{
+  "name": "alacritty-themes",
+  "version": "4.4.2",
+  "description": "Themes for Alacritty : A cross-platform GPU-Accelerated Terminal emulator",
+  "main": "index.js",
+  "bin": {
+    "alacritty-themes": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "mocha --recursive",
+    "deploy": "git push && git push --tags && npm publish",
+    "lint": "eslint .",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": [
+    "alacritty",
+    "theme",
+    "themes",
+    "terminal emulators",
+    "terminal"
+  ],
+  "author": "Rajasegar Chandran <rajasegar.c@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "prompts": "2.4.2",
+    "temp": "0.9.4",
+    "yaml": "1.10.2"
+  },
+  "preferGlobal": true,
+  "devDependencies": {
+    "@commitlint/cli": "17.0.3",
+    "@commitlint/config-conventional": "17.0.3",
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/git": "10.0.1",
+    "eslint": "8.20.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "husky": "8.0.1",
+    "mocha": "10.0.0",
+    "mock-fs": "5.1.2",
+    "prettier": "2.7.1",
+    "semantic-release": "^19.0.2",
+    "sinon": "14.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "release": {
+    "branches": [
+      "master"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "angular",
+          "releaseRules": [
+            {
+              "type": "docs",
+              "scope": "README",
+              "release": "patch"
+            },
+            {
+              "type": "refactor",
+              "scope": "core-*",
+              "release": "minor"
+            },
+            {
+              "type": "refactor",
+              "release": "patch"
+            }
+          ],
+          "parserOpts": {
+            "noteKeywords": [
+              "BREAKING CHANGE",
+              "BREAKING CHANGES"
+            ]
+          }
+        }
+      ],
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "release(version): Release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  }
+}

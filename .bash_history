@@ -631,3 +631,233 @@ ls
 adb install Aegis.apk 
 adb install F-Droid.apk 
 adb install Torrz.apk 
+cd ~/.dotfiles/
+ls
+git status
+git add .
+git commit -m "starship config"
+git push
+./setup.sh 
+git status
+git add .
+git commit "templates and more"
+git commit -m "templates and more"
+git push
+ls
+cd /media/samsepi0l/DATA/
+ls
+cd Development/
+ls
+cd LeetCode/
+ls
+git status
+git push
+cd
+cd ~/.dotfiles/
+ls
+git status
+clear
+ls
+cd
+clear
+sudo apt update
+sudo apt dist-upgrade
+sudo apt update
+sudo apt dist-upgrade
+sudo apt clean
+sudo apt dist-upgrade
+sudo apt upgrade
+ls
+cd ~/.dotfiles/
+ls
+git status
+clear
+cd
+ls
+sudo apt install pcmanfm
+sudo apt install dolphin
+sudo apt remove pcmanfm dolphin 
+sudo add-apt-repository ppa:webupd8team/nemo
+sudo apt-get install nemo nemo-fileroller
+sudo apt search nemo
+sudo apt install nemo*
+sudo apt search dolphin
+sudo apt search nautilus
+sudo apt install nautilus*
+sudo apt clean
+sudo apt remove nemo
+sudo apt autoremove
+sudo apt remove kdeconnect 
+sudo apt remove --purge nextcloud-desktop
+sudo apt remove --purge timeshift 
+sudo apt autoremove
+flatpak remove masterpdf
+sudo apt remove akregator 
+apt search kvantum
+sud apt remove kvatum
+sudo apt remove kvatum
+flatpak remove kvantum
+sudo apt remove sweeper 
+sudo apt clean
+sudo apt autoremove
+sudo apt dist-upgrade
+sudo apt search onlyoffice
+flatpak search onlyoffice
+flatpak install onlyoffice
+$ git clone https://github.com/dracula/geany
+git clone https://github.com/dracula/geany
+mkdir ~/.config/geany/colorschemes/
+ls
+cd geany/
+ls
+cp Dracula-Theme.conf ~/.config/geany/colorschemes/
+sudo apt remove --purge playonlinux 
+sudo apt remove --purge fildem
+sudo apt remove fildemhud
+sudo apt search fildem
+sudo apt remove python3-fildem 
+sudo apt clean
+clear
+sudo apt install webcamoid
+sudo apt dist-upgrade
+gcc
+clear
+sudo apt update
+sudo apt dist ugrade
+sudo apt dist upgrade
+git clone https://github.com/cbrnix/Flatery.git
+cd Flatery/
+ls
+./install.sh 
+cd
+git clone https://github.com/rtlewis88/rtl88-Themes.git
+git branch master
+cd rtl88-Themes/
+git branch master
+git pull
+git clone
+git checkout master
+git pull
+git pull master
+git clone
+git pull
+git status
+git branch
+sudo apt update
+sudo apt dist-upgrade
+sudo apt autoremove
+sudo apt update
+sudo apt upgrade
+sudo apt dist-upgrade
+sudo apt install kde-standard
+sudo apt update
+sudo apt remove kvantummanager
+sudo apt remove kvantum
+sudo apt remove qt5-style-kvantum qt5-style-kvantum-themes
+sudo apt install kde*
+sudo apt update
+sudo apt dist-upgrade
+sudo apt autoremove
+sudo apt autoremove --purge kde-standard
+sudo apt autoremove
+sudo apt remove --purge kde*
+sudo apt clean
+sudo apt update
+sudo apt autremove
+sudo apt autoremove 
+sudo apt dist-upgrade
+sudo apt install xfce4*
+sudo apt remove xfce4*
+sudo apt search breeze
+sudo apt install breeze-gtk-theme 
+sudo apt autoremove
+sudo apt clean
+sudo apt dist-upgrade
+sudo apt clean
+sudo apt install gnome-session-wayland
+sudoedit /etc/gdm3/custom.conf
+clear
+sudo apt update
+sudo apt dist-upgrade
+sudo apt clean
+clear
+sudo apt install kde-full
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser
+sudo apt remove brave-browser
+clear
+sudo apt update
+sudo apt dist-upgrade
+sudo apt autoremove 
+sudo apt remove --purge libre-office*
+sudo apt remove --purge libre-office
+sudo apt remove --purge libreoffice*
+s
+flatpak remove libreoffice
+sudo apt install libreoffice*
+sudo apt autoremove
+sudo apt update
+sudo apt install libreoffice
+sudo apt update
+clear
+sudo apt update
+sudo apt dist-upgrade
+sudo apt clean
+sudo su
+sudo apt update
+sudo apt install google-chrome-stable
+sudo apt update
+sudo apt dist-uprade
+sudo apt dist-upgrade 
+sudo apt install latte
+sudo apt clean
+sudo apt udate
+sudo apt update 
+sudo apt dit-upgrade
+sudo apt dist-upgrade 
+clear
+sudo apt dist-upgrade
+sudo apt clean
+sudo apt dist-upgrade
+sudo apt remove kmahjongg kajongg kigo kiriki 
+sudo apt remove --purge kanagram 
+sudo apt autoremove
+sudo apt remove --purge kdiamond ksudoku kubrick palapeli katomic killbots 
+sudo apt update
+sudo apt dist-upgrade 
+sudo apt remove --purge picmi kreversi kapman granatier blinken khangman knetwalk konquest 
+sudo apt remove --purge kblocks kbounce kbreakout kgoldrunner kollision ksnakeduel dreamchess kfourinline ksquares ksirk 
+sudo apt remove kalgebra cantor cervisia kapptemplate kuiviewer umbrello klettres kwordquiz parley artikulate kbruch kig kmplot rocs kturtle minuet step ktouch kgeography 
+sudo apt autoremove
+sudo apt remove kimagemapeditor lokalize kompare kcachegrind 
+sudo apt autoremove
+sudo apt remove kalzium 
+sudo apt autoremove
+sudo apt seach marble
+sudo apt search marble
+sudo apt remove akonadi
+sudo apt remove akonadi*
+sudo atp autoremove
+sudo apt autoremove 
+sudo apt autoremove
+sudo apt clean
+sudo apt update
+sudo apt dist-upgrade
+sudo apt remove juk elisa timidity dragonplayer 
+clear
+sudo apt autoremove 
+sudo apt clean
+sudo apt remove akregator konqueror krfb krdc 
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
+sudo apt update
+sudo apt install kmail
+apt search kmail
+sudo apt install kmailtransport-akonadi 
+sudo apt remove kmail
+sudo apt autoremov
+sudo apt autoremove 
+sudo apt remove akonadi

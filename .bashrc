@@ -115,5 +115,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+alias tmux='tmux -u'
 neofetch
 eval "$(starship init bash)"

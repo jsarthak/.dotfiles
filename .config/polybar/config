@@ -1,0 +1,582 @@
+;[colors]
+;background = #282a36
+; foreground = #ECBDF6
+;foreground = #f8f8f2
+
+; Define fallback values used by all module formats
+;format-foreground = #FF0000
+;format-background = #00FF00
+;format-underline =
+;format-overline =
+;format-spacing =
+;format-padding =
+;format-margin =
+;format-offset =
+
+[colors]
+; Nord theme ============
+background = #282c34
+foreground = #abb2bf
+alert = #bd2c40
+volume-min = #a3be8c
+volume-med = #ebcb8b
+volume-max = #bf616a
+; =======================
+blue = #005577
+pink = #ff79c6
+green = #50fa7b
+cyan = #8be9fd
+purple = #bd93f9
+red = #ff5555
+yellow = #f1fa8c
+orange = #ffb86c
+
+
+; Gotham theme ==========
+; background = #0a0f14
+; foreground = #99d1ce
+; alert = #d26937
+; volume-min = #2aa889
+; volume-med = #edb443
+; volume-max = #c23127
+; =======================
+
+; INTRCPTR theme ============
+;background = ${xrdb:color0:#222}
+;background = #aa000000
+;background-alt = #444
+;foreground = ${xrdb:color7:#222}
+;foreground = #fff
+;foreground-alt = #555
+;primary = #ffb52a
+;secondary = #e60053
+;alert = #bd2c40
+
+
+
+
+[global/wm]
+margin-bottom = 0
+
+[section/base]
+monitor = ${env:MONITOR:eDP1}
+width = 100%
+height = 16
+radius = 0
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+line-size = 2
+border-size = 0
+border-color = #00
+padding-left = 2
+padding-right = 2
+padding-top = 4
+font-0 = MonoLisa:pixelsize=9;0
+font-1 = FontAwesome:style=Regular:pixelsize=9
+cursor-click = pointer
+cursor-scroll = ns-resize
+separator = "."
+separator-padding = 1
+separator-foreground = ${colors.foreground}
+
+[bar/main]
+inherit = section/base
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 20
+tray-background = ${colors.background}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 4
+tray-scale = 1.0
+;tray-position = right
+;tray-maxsize = 14
+;tray-offset-y = 0
+;tray-padding = 6
+;tray-scale = 1.0
+;tray-background = ${colors.background}
+modules-left = i3 xwindow 
+modules-center = 
+modules-right = mpd memory wireless-network pulseaudio pulseaudio-microphone battery date
+
+
+[bar/secondary]
+inherit = section/base
+modules-left = i3 xwindow
+modules-center = 
+modules-right = pulseaudio pulseaudio-microphone battery date
+
+[module/i3]
+type = internal/i3
+pin-workspaces = true
+show-urgent = true
+strip-wsnumbers = true
+index-sort = true
+enable-click = true
+enable-scroll = false
+wrapping-scroll = false
+reverse-scroll = false
+; fuzzy-match = true
+; ws-icon-0 = 1;
+; ws-icon-1 = 2;
+; ws-icon-2 = 3;
+; ws-icon-3 = 4;
+; ws-icon-4 = 5;
+; ws-icon-default = 
+; label-focused = %index%
+label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.blue}
+;label-focused-underline = ${colors.green}
+
+label-focused-padding = 0
+label-unfocused-padding = 0
+
+
+
+
+[module/backlight]
+;https://github.com/jaagr/polybar/wiki/Module:-backlight
+
+type = internal/backlight
+
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+card = intel_backlight
+
+; Available tags:
+;   <label> (default)
+;   <ramp>
+;   <bar>
+format = <ramp> <label>
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+; Available tokens:
+;   %percentage% (default)
+label = %percentage%%
+
+; Only applies if <ramp> is used
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
+; Only applies if <bar> is used
+bar-width = 10
+bar-indicator = |
+bar-fill = ─
+bar-empty = ─
+
+
+
+
+
+[module/wired-network]
+type = internal/network
+interface = enp44s0
+
+
+[module/wireless-network]
+;https://github.com/jaagr/polybar/wiki/Module:-network
+type = internal/network
+interface = wlp0s20f3
+interval = 3.0
+label-connected = %essid%
+
+format-connected = <label-connected>
+;format-connected = <ramp-signal> <label-connected>
+format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.background}
+format-connected-prefix = "  "
+format-connected-prefix-foreground = #7e52c6
+format-connected-prefix-background = ${colors.background}
+format-connected-underline = #7e52c6
+
+label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.alert}
+label-disconnected-background = ${colors.background}
+
+format-disconnected = <label-disconnected>
+format-disconnected-foreground = ${colors.alert}
+format-disconnected-background = ${colors.background}
+format-disconnected-prefix = "  "
+format-disconnected-prefix-foreground = ${colors.alert}
+format-disconnected-prefix-background = ${colors.background}
+format-disconnected-underline =${colors.alert}
+
+ramp-signal-0 = ▁
+ramp-signal-1 = ▂
+ramp-signal-2 = ▃
+ramp-signal-3 = ▄
+ramp-signal-4 = ▅
+ramp-signal-5 = ▆
+ramp-signal-6 = ▇
+ramp-signal-7 = █
+ramp-signal-foreground = #7e52c6
+
+################################################################################
+
+
+
+[module/mpd]
+ type = custom/script
+ separator = ${colors.background}
+ tail = true
+;format-prefix = ""
+ format = <label>
+ exec = ~/.config/polybar/song.py
+click-right = "kill -USR1 $(pgrep --oldest --parent %pid%)"
+
+
+[module/title]
+type = internal/xwindow
+; Available tags:
+;   <label> (default)
+format = <label>
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+format-padding = 4
+; Available tokens:
+;   %title%
+; Default: %title%
+label = %title%
+label-maxlen = 25
+; Used instead of label when there is no window title
+; Available tokens:
+;   None
+label-empty = Empty
+label-empty-foreground = #707880
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+label = %percentage_used%%
+format-underline = ${colors.blue} 
+
+[module/pulseaudio]
+type = internal/pulseaudio
+separator = ${colors.background}
+sink = alsa_output.pci-0000_03_00.6.analog-stereo
+use-ui-max = false
+interval = 5
+format-volume = <ramp-volume> <label-volume>
+format-volume-underline = ${colors.green}
+label-volume = %percentage%%
+format-muted =  M 
+format-muted-underline = ${colors.pink}
+label-muted-foreground = ${colors.pink}
+format-background = ${colors.green}
+background = ${colors.green}
+format-foreground = ${colors.green}
+click-right=pavucontrol
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+; format-prefix = "VOL: " 
+
+
+[module/pulseaudio-microphone]
+type = custom/script
+separator=${colors.background}
+exec = ~/.config/polybar/pulseaudio-microphone.sh
+tail = true
+format-prefix = " " 
+format-underline = ${colors.yellow}
+format-muted-underline = ${colors.pink}
+click-left = ~/.config/polybar/pulseaudio-microphone.sh --toggle &
+scroll-up = ~/.config/polybar/pulseaudio-microphone.sh --increase &
+scroll-down = ~/.config/polybar/pulseaudio-microphone.sh --decrease &
+click-right=pavucontrol
+
+
+[module/battery]
+type = internal/battery
+separator = ${colors.background}
+battery = BAT0
+adapter = ADP1
+full-at = 100
+
+format-charging = <animation-charging> <label-charging>
+label-charging =  %percentage%%
+format-charging-foreground = ${colors.foreground}
+format-charging-background = ${colors.background}
+format-charging-underline = #a3c725
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging =  %percentage%%
+format-discharging-underline = #c7ae25
+format-discharging-foreground = ${colors.foreground}
+format-discharging-background = ${colors.background}
+
+format-full-prefix = " "
+format-full-prefix-foreground = #a3c725
+format-full-underline = #a3c725
+format-full-foreground = ${colors.foreground}
+format-full-background = ${colors.background}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = #c7ae25
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = #a3c725
+animation-charging-framerate = 750
+
+
+[module/mic-vol]
+type = custom/script
+separator = ${colors.background}
+interval = 1
+format =  <label>
+exec = bash ~/.config/polybar/mic.sh show-vol
+format-underline = ${colors.green}
+; Control actions (using pactl)
+click-left = bash  ~/.config/polybar/mic.sh mute-vol
+scroll-up = bash ~/.config/polybar/mic.sh inc-vol
+scroll-down = bash ~/.config/polybar/mic.sh dec-vol
+
+
+
+[module/date]
+;https://github.com/jaagr/polybar/wiki/Module:-date
+type = internal/date
+; Seconds to sleep between updates
+interval = 5
+; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+date = " %a %b %d, %Y"
+date-alt = " %a %b %d, %Y"
+time = %l:%M%p
+time-alt = %l:%M%p
+format-prefix = " "
+format-prefix-foreground = #fefefe
+format-foreground = #fefefe
+format-background = #668bd7
+label = "%date% %time% "
+
+
+
+;[module/date]
+;type = internal/date
+;separator = ${colors.background}
+;interval = 1
+;format-prefix = ""
+;date-alt = " %d %b -"
+;time = %I:%M %p
+;time-alt = %I:%M:%S %p
+;label = %date% %time%
+; format-underline = ${colors.green} 
+
+[module/calendar]
+type = internal/date
+interval = 60
+date = %d %b
+label =  %date%
+; format-underline = ${colors.blue}
+click-left = gsimplecal
+click-right = killall gsimplecal
+
+
+[module/xwindow]
+;https://github.com/jaagr/polybar/wiki/Module:-xwindow
+type = internal/xwindow
+
+; Available tokens:
+;   %title%
+; Default: %title%
+label = %title%
+label-maxlen = 30
+
+format-prefix = "  "
+format-prefix-underline = #292d3e
+format-underline = #e1acff
+format-foreground = #e1acff
+format-background = ${colors.background}
+
+###############################################################################
+
+
+[module/filesystem]
+;https://github.com/jaagr/polybar/wiki/Module:-filesystem
+type = internal/fs
+
+; Mountpoints to display
+mount-0 = /
+;mount-1 = /home
+;mount-2 = /var
+
+; Seconds to sleep between updates
+; Default: 30
+interval = 30
+
+; Display fixed precision values
+; Default: false
+fixed-values = false
+
+; Spacing between entries
+; Default: 2
+spacing = 4
+
+; Available tags:
+;   <label-mounted> (default)
+;   <bar-free>
+;   <bar-used>
+;   <ramp-capacity>
+format-mounted = <label-mounted>
+format-mounted-foreground = ${colors.foreground}
+format-mounted-background = ${colors.background}
+format-mounted-underline = #fe0000
+
+
+; Available tokens:
+;   %mountpoint%
+;   %type%
+;   %fsname%
+;   %percentage_free%
+;   %percentage_used%
+;   %total%
+;   %free%
+;   %used%
+; Default: %mountpoint% %percentage_free%%
+label-mounted = %mountpoint% : %used% used of %total%
+
+; Available tokens:
+;   %mountpoint%
+; Default: %mountpoint% is not mounted
+label-unmounted = %mountpoint% not mounted
+format-unmounted-foreground = ${colors.foreground}
+format-unmounted-background = ${colors.background}
+;format-unmounted-underline = ${colors.alert}
+
+################################################################################
+
+[module/kernel]
+type = custom/script
+exec = uname -r
+tail = false
+interval = 1024
+
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = "  "
+format-prefix-foreground = #0084FF
+format-underline = #4B5665
+
+################################################################################
+
+[module/jgmenu]
+type = custom/script
+interval = 120
+exec = echo "ArcoLinux"
+click-left = "jgmenu_run >/dev/null 2>&1 &"
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+################################################################################
+
+[module/load-average]
+type = custom/script
+exec = uptime | grep -ohe 'load average[s:][: ].*' | awk '{ print $3" "$4" "$5"," }' | sed 's/,//g'
+interval = 100
+
+;HOW TO SET IT MINIMAL 10 CHARACTERS - HIDDEN BEHIND SYSTEM ICONS
+;label = %output%
+label = %output:10%
+
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = "  "
+format-prefix-foreground = #62FF00
+format-underline = #62FF00
+
+################################################################################
+
+[module/memory1]
+;https://github.com/jaagr/polybar/wiki/Module:-memory
+type = internal/memory
+interval = 1
+; Available tokens:
+;   %percentage_used% (default)
+;   %percentage_free%
+;   %gb_used%
+;   %gb_free%
+;   %gb_total%
+;   %mb_used%
+;   %mb_free%
+;   %mb_total%
+label = %percentage_used%%
+bar-used-indicator =
+bar-used-width = 10
+bar-used-foreground-0 = #3384d0
+bar-used-fill = 
+bar-used-empty = 
+bar-used-empty-foreground = #ffffff
+
+format = <label> <bar-used>
+format-prefix = "  "
+format-prefix-foreground = #3384d0
+format-underline = #4B5665
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+################################################################################
+
+[module/memory2]
+;https://github.com/jaagr/polybar/wiki/Module:-memory
+type = internal/memory
+interval = 1
+; Available tokens:
+;   %percentage_used% (default)
+;   %percentage_free%
+;   %gb_used%
+;   %gb_free%
+;   %gb_total%
+;   %mb_used%
+;   %mb_free%
+;   %mb_total%
+label = %percentage_used%%
+
+format = Mem <label>
+format-prefix = " "
+format-prefix-foreground = #fefefe
+format-foreground = #fefefe
+format-background = #668bd7
+
+################################################################################
+
+[module/memory3]
+;https://github.com/jaagr/polybar/wiki/Module:-memory
+type = internal/memory
+interval = 1
+; Available tokens:
+;   %percentage_used% (default)
+;   %percentage_free%
+;   %gb_used%
+;   %gb_free%
+;   %gb_total%
+;   %mb_used%
+;   %mb_free%
+;   %mb_total%
+label = %gb_used%/%gb_free%
+
+format = Mem <label>
+format-prefix = "  "
+format-prefix-foreground = #3384d0
+format-underline = #3384d0
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+
+################################################################################
+

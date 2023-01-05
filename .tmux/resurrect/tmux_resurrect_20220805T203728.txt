@@ -1,0 +1,4 @@
+pane	0	1	1	:*	1	IGN-BLR-LP-0320	:/home/sarthakj	0	ssh	:ssh sarthak@10.201.4.253
+pane	0	1	1	:*	2	IGN-BLR-LP-0320	:/home/sarthakj	1	ssh	:ssh sarthak@10.201.4.253
+window	0	1	:ssh	1	:*	cc77,238x57,0,0{119x57,0,0,0,118x57,120,0,1}	:
+state	0	

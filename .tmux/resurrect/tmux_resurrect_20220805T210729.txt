@@ -1,0 +1,9 @@
+pane	0	1	1	:*	1	IGN-BLR-LP-0320	:/home/sarthakj	0	ssh	:ssh sarthak@10.201.4.253
+pane	0	1	1	:*	2	IGN-BLR-LP-0320	:/home/sarthakj	1	ssh	:ssh sarthak@10.201.4.253
+pane	0	2	0	:-	1	IGN-BLR-LP-0320	:/home/sarthakj/.config/alacritty/alacritty-themes/themes	1	bash	:
+pane	0	2	0	:-	2	IGN-BLR-LP-0320	:/home/sarthakj/.config/alacritty	0	nvim	:nvim dracula.yml
+pane	0	3	0	:	1	IGN-BLR-LP-0320	:/home/sarthakj/git-repos/v4l2loopback	1	bash	:
+window	0	1	:ssh	1	:*	cc77,238x57,0,0{119x57,0,0,0,118x57,120,0,1}	:
+window	0	2	:bash	0	:-	cc7a,238x57,0,0{119x57,0,0,2,118x57,120,0,3}	:
+window	0	3	:bash	0	:	cd62,238x57,0,0,5	:
+state	0	

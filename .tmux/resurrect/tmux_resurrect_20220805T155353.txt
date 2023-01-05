@@ -1,0 +1,10 @@
+pane	0	1	1	:*	1	ignitarium@7372a2745425: ~/Ankaa_QUAD_Linux_Yocto_BSP_Release_Package_v5.0/build_esom	:/home/sarthakj	1	ssh	:ssh sarthak@10.201.4.253
+pane	0	1	1	:*	2	IGN-BLR-LP-0320	:/home/sarthakj	0	ssh	:ssh sarthak@10.201.4.253
+pane	0	2	0	:-	1	0:3:bash - "0:3:bash - "0:3:bash - "IGN-BLR-LP-0320" " " 	:/home/sarthakj	1	bash	:
+pane	1	1	0	:-	1	1:1:bash - "1:1:bash - "1:1:bash - "IGN-BLR-LP-0320"""	:/home/sarthakj/git-repos/fonts	1	bash	:
+pane	1	2	1	:*	1	IGN-BLR-LP-0320	:/home/sarthakj	1	bash	:su -l ignitarium
+window	0	1	:ssh	1	:*	cc83,238x57,0,0{119x57,0,0,8,118x57,120,0,9}	:
+window	0	2	:bash	0	:-	cd63,238x57,0,0,6	:
+window	1	1	:bash	0	:-	ca84,100x29,0,0,7	:
+window	1	2	:bash	1	:*	656f,100x29,0,0,10	:
+state	1	
